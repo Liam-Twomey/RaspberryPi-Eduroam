@@ -25,14 +25,14 @@ If any of these lines are present, __do not use this script__, follow the instru
 ```bash
 ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
 update_config=1
-country=ef
+country=US
 network={
 	ssid="eduroam"
 	eap=PEAP
 	key_mgmt=WPA-EAP
 	phase2="auth=MSCHAPV2"
-	identity="ab"
-	password="cd"
+	identity="<Username@institution.edu>"
+	password="<password>"
 }
 ```
 There may be other `network` blocks in your file, as long as none are named eduroam and none of the lines outside the `network` block are present, it should be safe to run.
